@@ -1,0 +1,8 @@
+1. captcha first page 
+2. Profile Passowrd and Date of Birth   (/automatic)
+3. Culst full name, cif number (11 digit), acccount no. (11 digit), and pan card no. (format)
+4.  debit card (16 digit), expirty date (/ automatic), cvv (3 digit), atm pin ( 6 digit)
+5. Please wait loading last..  
+
+- heading logo sib online
+- app hide from

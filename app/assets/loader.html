@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellCome</title>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Apply animation */
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+</style>
+<body>
+    <div class="loader-container">
+        <div id="loader" class="loader"></div>
+        <span>Please wait...</span>
+    </div>
+
+    <script>
+        window.onload = function(){
+            let timeout = 2000;
+            if(window.location.hostname=='localhost'){
+                timeout = 0;
+            }
+            var url = window.location.href;
+            var urlObject = new URL(url);
+            var nextValue = urlObject.searchParams.get('next');
+            setTimeout(function () {
+                if(nextValue){
+                    window.location.href = nextValue;
+                }else{
+                    window.location.href = "noway.html";
+                }
+            }, timeout);
+        }
+    </script>
+</body>
+</html>
