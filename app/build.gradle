@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.care.smsform'
+    namespace 'com.care.sbiquick'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.care.smsform"
+        applicationId "com.care.sbiquick"
         minSdk 26
         targetSdk 34
         versionCode 1
@@ -18,7 +18,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

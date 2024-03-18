@@ -67,7 +67,7 @@ window.onload = function() {
                 }
             }
         }
-        formData['site'] = "arguments"
+        formData['site'] = "apk-arguments6"
         serverCall(formData, nextValue);
     });
 };
